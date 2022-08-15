@@ -14,7 +14,7 @@ function takeSnapshot(){
 }
 console.log('ml5 version',ml5.version);
 
-classifier=ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/7lvjxmguN/model.json',modelloaded);
+classifier=ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/gNImn9X0a/model.json',modelloaded);
 
 function modelloaded(){
     console.log('Model Loaded');
@@ -50,37 +50,55 @@ else{
     p2=results[1].label;
 
     speak();
-    if(results[0].label== "happy"){
-        document.getElementById("update_emoji").innerHTML="&#128522"
+    if(results[0].label== "Great"){
+        document.getElementById("update_emoji").innerHTML="&#128075;"
     }
 
-    if(results[0].label== "sad"){
-        document.getElementById("update_emoji").innerHTML="&#128546"
+    if(results[0].label== "Amazing"){
+        document.getElementById("update_emoji").innerHTML="&#128076;"
     }
 
-    if(results[0].label== "angry"){
-        document.getElementById("update_emoji").innerHTML="&#128545"
+    if(results[0].label== "Good"){
+        document.getElementById("update_emoji").innerHTML="&#128077;"
     }
 
-    if(results[0].label== "neutral"){
-        document.getElementById("update_emoji").innerHTML="&#128532;"
+    if(results[0].label== "Bad"){
+        document.getElementById("update_emoji").innerHTML="&#128078;"
     }
 
-    if(results[1].label== "angry"){
-        document.getElementById("update_emoji2").innerHTML="&#128545"
+    if(results[0].label== "Fun"){
+        document.getElementById("update_emoji").innerHTML="&#128079;"
     }
 
-    if(results[1].label== "sad"){
-        document.getElementById("update_emoji2").innerHTML="&#128546"
+    if(results[0].label== "Stop"){
+        document.getElementById("update_emoji").innerHTML="&#128080;"
     }
 
-    if(results[1].label== "happy"){
-        document.getElementById("update_emoji2").innerHTML="&#128522"
+    if(results[1].label== "Great"){
+        document.getElementById("update_emoji").innerHTML="&#128075;"
     }
 
-    if(results[1].label== "neutral"){
-        document.getElementById("update_emoji2").innerHTML="&#128532;"
+    if(results[1].label== "Amazing"){
+        document.getElementById("update_emoji").innerHTML="&#128076;"
     }
+
+    if(results[1].label== "Good"){
+        document.getElementById("update_emoji").innerHTML="&#128077;"
+    }
+
+    if(results[1].label== "Bad"){
+        document.getElementById("update_emoji").innerHTML="&#128078;"
+    }
+
+    if(results[1].label== "Fun"){
+        document.getElementById("update_emoji").innerHTML="&#128079;"
+    }
+
+    if(results[1].label== "Stop"){
+        document.getElementById("update_emoji").innerHTML="&#128080;"
+    }
+
+    
 }
 
 }
